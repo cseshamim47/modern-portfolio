@@ -19,17 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={spaceGrotesk.className}
-      >
+      <body className={`${spaceGrotesk.className} dark`}>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
