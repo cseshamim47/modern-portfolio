@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 import AboutMeTitle from './AboutMeTitle';
@@ -8,33 +8,29 @@ import { HoverBorderGradient } from './ui/hover-border-gradient';
 import Link from 'next/link';
 
 const AboutMe = () => {
-  const { scrollYProgress } = useScroll();
-  const titleY = useTransform(scrollYProgress, [0, 0.2], [100, 0]);
-  const titleOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
-  
-  const textX = useTransform(scrollYProgress, [0.1, 0.3], [-100, 0]);
-  const textOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
-  
-  const imageX = useTransform(scrollYProgress, [0.2, 0.4], [100, 0]);
-  const imageOpacity = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]);
-
-  const buttonY = useTransform(scrollYProgress, [0.3, 0.5], [50, 0]);
-  const buttonOpacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1]);
-
   return (
-    <div className="min-h-screen relative">
+    <div className="relative">
       <div className="max-w-6xl mx-auto px-4">
-        <motion.div
-          style={{ y: titleY, opacity: titleOpacity }}
-          className="text-center mb-16"
-        >
-          <AboutMeTitle />
-        </motion.div>
+        <div className="relative w-full h-20">
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            className="absolute w-full"
+          >
+            <AboutMeTitle />
+          </motion.div>
+        </div>
+        <div className="h-4"></div>
 
-        <div className="absolute top-20 left-0 mx-5">
+        <div className="top-20 left-0 mx-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
-              style={{ x: textX, opacity: textOpacity }}
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6 }}
               className="text-white"
             >
               <motion.div
@@ -124,28 +120,36 @@ const AboutMe = () => {
             </motion.div>
 
             <motion.div
-              style={{ x: imageX, opacity: imageOpacity }}
-              className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl"
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6 }}
+              className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl w-full"
             >
               <Image
                 src="/multi.jpg"
                 alt="Jonas coaching"
                 fill
-                className="object-cover"
+                className="object-cover w-full"
                 priority
               />
             </motion.div>
           </div>
-          <motion.div 
-            style={{ y: buttonY, opacity: buttonOpacity }}
-            className="flex justify-center mt-20"
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center mt-12"
           >
             <HoverBorderGradient
-              containerClassName="rounded-full"
+              containerClassName="rounded-xl"
               as="button"
               className="dark:bg-background bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              <Link href="https://vanhastel.com/skills" className="text-center">See My Full Skill Set</Link>
+              <Link href="https://vanhastel.com/skills" className="text-center">
+                See My Full Skill Set
+              </Link>
             </HoverBorderGradient>
           </motion.div>
         </div>
