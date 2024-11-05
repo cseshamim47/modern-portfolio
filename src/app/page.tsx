@@ -8,7 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 export default function Home() {
   return (
-    <main>
+    <main className="space-y-10">
       <Hero />
       <AboutMe />
       <Services />
