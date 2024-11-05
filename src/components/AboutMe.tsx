@@ -40,8 +40,12 @@ const AboutMe = () => {
               >
                 <motion.div
                   variants={{
-                    initial: { opacity: 0, scale: 0.95 },
-                    hover: { opacity: 0.1, scale: 1 },
+                    initial: {
+                      opacity: 0,
+                      scale: 0.95,
+                      borderRadius: "0.5rem",
+                    },
+                    hover: { opacity: 0.1, scale: 1, borderRadius: "0.5rem" },
                   }}
                   className="absolute inset-0 bg-white rounded-lg"
                   transition={{ duration: 0.2 }}
@@ -62,8 +66,12 @@ const AboutMe = () => {
               >
                 <motion.div
                   variants={{
-                    initial: { opacity: 0, scale: 0.95 },
-                    hover: { opacity: 0.1, scale: 1 },
+                    initial: {
+                      opacity: 0,
+                      scale: 0.95,
+                      borderRadius: "0.5rem",
+                    },
+                    hover: { opacity: 0.1, scale: 1, borderRadius: "0.5rem" },
                   }}
                   className="absolute inset-0 bg-white rounded-lg"
                   transition={{ duration: 0.2 }}
@@ -83,8 +91,12 @@ const AboutMe = () => {
               >
                 <motion.div
                   variants={{
-                    initial: { opacity: 0, scale: 0.95 },
-                    hover: { opacity: 0.1, scale: 1 },
+                    initial: {
+                      opacity: 0,
+                      scale: 0.95,
+                      borderRadius: "0.5rem",
+                    },
+                    hover: { opacity: 0.1, scale: 1, borderRadius: "0.5rem" },
                   }}
                   className="absolute inset-0 bg-white rounded-lg"
                   transition={{ duration: 0.2 }}
@@ -103,8 +115,12 @@ const AboutMe = () => {
               >
                 <motion.div
                   variants={{
-                    initial: { opacity: 0, scale: 0.95 },
-                    hover: { opacity: 0.1, scale: 1 },
+                    initial: {
+                      opacity: 0,
+                      scale: 0.95,
+                      borderRadius: "0.5rem",
+                    },
+                    hover: { opacity: 0.1, scale: 1, borderRadius: "0.5rem" },
                   }}
                   className="absolute inset-0 bg-white rounded-lg"
                   transition={{ duration: 0.2 }}
