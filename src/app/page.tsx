@@ -1,5 +1,5 @@
 import AboutMe from "@/components/AboutMe";
-import Help from "@/components/Help";
+import ApproachToCoaching from "@/components/ApproachToCoaching";
 import Hero from "@/components/Hero";
 import QuestionsAnswers from "@/components/QuestionsAnswers";
 import Services from "@/components/Services";
@@ -8,13 +8,13 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 export default function Home() {
   return (
-    <main className="space-y-10">
+    <main className="space-y-20">
       <Hero />
       <AboutMe />
       <Services />
-      <Help />
+      <ApproachToCoaching />
       <WhyChooseMe />
-      <QuestionsAnswers />  
+      <QuestionsAnswers />
       <Testimonials />
       <Contact />
     </main>

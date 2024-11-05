@@ -3,14 +3,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HoverEffect } from './ui/card-hover-effect';
 
-const Help = () => {
+const ApproachToCoaching = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 0.6 }}
-      className="max-w-5xl mx-auto px-8 mt-14"
+      className="max-w-5xl mx-auto px-8 !mt-40"
     >
       <div className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -47,4 +47,4 @@ export const projects = [
 ];
 
 
-export default Help;
+export default ApproachToCoaching;

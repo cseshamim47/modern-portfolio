@@ -11,7 +11,7 @@ import { UserCircle2, Building2 } from 'lucide-react';
 
 const Services = () => {
   return (
-    <div className="px-4 md:px-8 bg-background mt-14">
+    <div className="px-4 md:px-8 bg-background pt-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -165,7 +165,8 @@ const Hero = () => {
         </HoverBorderGradient>
       </motion.div>
 
-      <div className="w-full h-8"></div>
+        {/* <div className="w-full h-20 bg-red-200/20"></div> */}
+        <div className="w-full h-20 bg-gradient-to-t from-background/95  to-transparent"></div>
     </HeroHighlight>
   );
 };
