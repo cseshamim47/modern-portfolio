@@ -3,8 +3,8 @@ import { SparklesCore } from './ui/sparkles';
 
 const AboutMeTitle = () => {
   return (
-    <div className="w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="text-5xl font-bold text-center text-white relative z-20">
+    <div className="w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-white relative z-20">
         Meet Your{" "}
         <span className="relative hover:cursor-pointer after:absolute after:bottom-0 after:left-0 after:h-full after:w-0 after:bg-indigo-500/30 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out">
           Multipotentialite

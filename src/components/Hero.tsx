@@ -69,7 +69,7 @@ const Hero = () => {
           delay: 0.5, // Delay until first motion.div appears
         }}
       >
-        <div className="flex justify-between space-x-6 w-full py-4 px-20 max-w-7xl mx-auto">
+        <div className="flex flex-col items-center md:items-stretch gap-8 md:gap-0 md:flex-row md:justify-between md:space-x-6 w-full py-4 px-4 md:px-6 lg:px-20 max-w-7xl mx-auto">
           <div className=" space-y-6 hover:bg-background/40">
             <h2 className="text-center text-4xl font-bold">Personal</h2>
             <div className="text-xl space-y-2 font-medium">
@@ -105,7 +105,9 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="w-1 h-inherit bg-border"></div>
+
+          <div className="w-[80vw] h-1 md:w-1 md:h-auto bg-border"></div>
+
           <div className="space-y-6 hover:bg-background/40">
             <h2 className="text-center text-4xl font-bold">Business</h2>
             <div className="text-xl space-y-2 font-medium">
@@ -165,8 +167,8 @@ const Hero = () => {
         </HoverBorderGradient>
       </motion.div>
 
-        {/* <div className="w-full h-20 bg-red-200/20"></div> */}
-        <div className="w-full h-20 bg-gradient-to-t from-background/95  to-transparent"></div>
+      {/* <div className="w-full h-20 bg-red-200/20"></div> */}
+      <div className="w-full h-20 bg-gradient-to-t from-background/95  to-transparent"></div>
     </HeroHighlight>
   );
 };

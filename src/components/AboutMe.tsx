@@ -22,9 +22,9 @@ const AboutMe = () => {
             <AboutMeTitle />
           </motion.div>
         </div>
-        <div className="h-4"></div>
+        <div className="h-4 md:h-4"></div>
 
-        <div className="top-20 left-0 mx-5">
+        <div className="left-0 mx-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -33,6 +33,22 @@ const AboutMe = () => {
               transition={{ duration: 0.6 }}
               className="text-white"
             >
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+                className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl w-full md:hidden block"
+              >
+                <Image
+                  src="/multi.jpg"
+                  alt="Jonas coaching"
+                  fill
+                  className="object-cover w-full"
+                  priority
+                />
+              </motion.div>
+
               <motion.div
                 whileHover="hover"
                 initial="initial"
@@ -50,7 +66,7 @@ const AboutMe = () => {
                   className="absolute inset-0 bg-white rounded-lg"
                   transition={{ duration: 0.2 }}
                 />
-                <p className="text-lg leading-relaxed relative z-10 hover:cursor-pointer p-3">
+                <p className="text-base md:text-lg leading-relaxed relative z-10 hover:cursor-pointer p-3">
                   I&apos;m Jonas – a multipotentialite and gifted coach with an
                   insatiable curiosity. With expertise in IT, yachting, diving,
                   and an exceptional ability to analyze emotions through my high
@@ -76,7 +92,7 @@ const AboutMe = () => {
                   className="absolute inset-0 bg-white rounded-lg"
                   transition={{ duration: 0.2 }}
                 />
-                <p className="text-lg leading-relaxed relative z-10 hover:cursor-pointer p-3">
+                <p className="text-base md:text-lg leading-relaxed relative z-10 hover:cursor-pointer p-3">
                   I quickly absorb new information, and my interests span across
                   industries. This means I can help you in virtually any area
                   you need – whether it&apos;s career guidance, emotional
@@ -101,7 +117,7 @@ const AboutMe = () => {
                   className="absolute inset-0 bg-white rounded-lg"
                   transition={{ duration: 0.2 }}
                 />
-                <p className="text-lg leading-relaxed relative z-10 hover:cursor-pointer p-3">
+                <p className="text-base md:text-lg leading-relaxed relative z-10 hover:cursor-pointer p-3">
                   I excel at helping people understand themselves better. This
                   is something I&apos;ve done for many, and it&apos;s my passion
                   to continue empowering others.
@@ -125,7 +141,7 @@ const AboutMe = () => {
                   className="absolute inset-0 bg-white rounded-lg"
                   transition={{ duration: 0.2 }}
                 />
-                <p className="text-lg leading-relaxed relative z-10 hover:cursor-pointer p-3">
+                <p className="text-base md:text-lg leading-relaxed relative z-10 hover:cursor-pointer p-3">
                   Beyond coaching, I&apos;m a hands-on problem solver. From
                   electricity, mechanics, and plumbing to various sports –
                   basketball, tennis, soccer, horseback riding, and more –
@@ -140,7 +156,7 @@ const AboutMe = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl w-full"
+              className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl w-full md:block hidden"
             >
               <Image
                 src="/multi.jpg"

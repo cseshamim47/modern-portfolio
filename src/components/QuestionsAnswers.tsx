@@ -18,7 +18,7 @@ const questions = [
 
 const QuestionsAnswers = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
@@ -30,15 +30,17 @@ const QuestionsAnswers = () => {
           Questions I Can Help You Answer
         </h1>
         <p className="max-w-3xl mx-auto text-lg text-gray-300 mb-12">
-          Feeling stuck or unsure of your next step? Whether it's personal growth, choosing the right career path, or starting your own business, I'm here to help you find clarity and direction.
+          Feeling stuck or unsure of your next step? Whether it's personal
+          growth, choosing the right career path, or starting your own business,
+          I'm here to help you find clarity and direction.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
         {questions.map((question, index) => (
-          <div 
+          <div
             key={index}
-            className="flex items-start gap-3 p-4 rounded-lg bg-white/5 backdrop-blur-sm"
+            className="flex items-start gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-sm"
           >
             <QuestionMarkCircledIcon className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
             <p className="text-gray-200">{question}</p>
@@ -48,7 +50,10 @@ const QuestionsAnswers = () => {
 
       <div className="text-center max-w-3xl mx-auto">
         <p className="text-gray-300 mb-8">
-          If any of these questions resonate with you, or if you have similar challenges, I'd love to guide you. My approach focuses on understanding where you are, clarifying your goals, and mapping out the most efficient route to success.
+          If any of these questions resonate with you, or if you have similar
+          challenges, I'd love to guide you. My approach focuses on
+          understanding where you are, clarifying your goals, and mapping out
+          the most efficient route to success.
         </p>
         <button className="px-8 py-3 bg-secondary text-white rounded-full hover:bg-secondary/80 transition-colors">
           Let's talk about how I can help you find your path

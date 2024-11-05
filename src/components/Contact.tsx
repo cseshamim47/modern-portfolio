@@ -93,8 +93,9 @@ const Contact = () => {
         </LabelInputContainer>
 
         <motion.button
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.99 }}
+          whileHover={{ scale: 1.005 }}
+          whileTap={{ scale: 0.995 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
           className="bg-primary relative group/btn w-full text-primary-foreground rounded-lg h-11 font-medium shadow-lg hover:opacity-90 transition-opacity"
           type="submit"
         >
