@@ -6,7 +6,31 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import Link from "next/link";
 
 const Hero = () => {
- 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      const start = window.scrollY;
+      const end = contactSection.offsetTop;
+      const duration = 1000; // 1 second
+      const startTime = performance.now();
+
+      const easeInQuad = (t: number) => t * t;
+
+      const animate = (currentTime: number) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        const easedProgress = easeInQuad(progress);
+        window.scrollTo(0, start + (end - start) * easedProgress);
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+
+      requestAnimationFrame(animate);
+    }
+  };
   return (
     <HeroHighlight className="w-[100vw]">
       <motion.div
@@ -45,7 +69,7 @@ const Hero = () => {
           delay: 0.5, // Delay until first motion.div appears
         }}
       >
-        <div className="flex justify-between space-x-6 w-full py-4 px-20 ">
+        <div className="flex justify-between space-x-6 w-full py-4 px-20 max-w-7xl mx-auto">
           <div className=" space-y-6 hover:bg-background/40">
             <h2 className="text-center text-4xl font-bold">Personal</h2>
             <div className="text-xl space-y-2 font-medium">
@@ -132,8 +156,9 @@ const Hero = () => {
           className="dark:bg-background bg-white text-black dark:text-white flex items-center space-x-2"
         >
           <Link
-            href="https://vanhastel.com/skills"
+            href="/#contact"
             className="text-center font-bold"
+            onClick={scrollToContact}
           >
             Get Started with a Free Session
           </Link>
