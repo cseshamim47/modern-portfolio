@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Space_Grotesk} from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import FloatingContact from "@/components/FloatingContact";
 
 const spaceGrotesk = Space_Grotesk({subsets: ["latin"]});
 
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.className} dark`}>
+      <body className={`${spaceGrotesk.className} dark `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -27,6 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <FloatingContact />
         </ThemeProvider>
       </body>
     </html>

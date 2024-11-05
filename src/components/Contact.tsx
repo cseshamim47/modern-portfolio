@@ -33,6 +33,7 @@ const Contact = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="max-w-4xl w-full mx-auto rounded-2xl p-8 bg-background/50 backdrop-blur-sm"
+      id="contact"
     >
       <motion.div
         initial={{ opacity: 0 }}
