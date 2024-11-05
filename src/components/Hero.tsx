@@ -48,7 +48,7 @@ const Hero = () => {
         }}
         className="space-y-3 text-center mb-10"
       >
-        <div className="text-white text-6xl">
+        <div className="text-white text-6xl font-bold">
           <Highlight>Oymor</Highlight>
         </div>
         <div className="text-white text-6xl">Coaching</div>
