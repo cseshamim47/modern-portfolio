@@ -69,7 +69,7 @@ const Hero = () => {
           delay: 0.5, // Delay until first motion.div appears
         }}
       >
-        <div className="flex justify-between space-x-6 w-full py-4 px-20 max-w-7xl mx-auto">
+        <div className="flex justify-between space-x-6 w-full py-4 px-20 max-w-6xl mx-auto">
           <div className=" space-y-6 hover:bg-background/40">
             <h2 className="text-center text-4xl font-bold">Personal</h2>
             <div className="text-xl space-y-2 font-medium">
@@ -165,7 +165,7 @@ const Hero = () => {
         </HoverBorderGradient>
       </motion.div>
 
-      <div className=" dark-shade w-full h-8"></div>
+      <div className="w-full h-8"></div>
     </HeroHighlight>
   );
 };
