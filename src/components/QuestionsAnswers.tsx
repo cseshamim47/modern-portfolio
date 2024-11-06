@@ -2,6 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { QuestionMarkCircledIcon } from '@radix-ui/react-icons';
+import { HoverBorderGradient } from './ui/hover-border-gradient';
+import Link from 'next/link';
+import scrollToContact from './Utility/ScrollToContact';
 
 const questions = [
   "I don't know what my next step should be – how do I move forward?",
@@ -23,27 +26,27 @@ const QuestionsAnswers = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 0.6 }}
-      className="  mt-14 py-16"
+      className="mx-4  mt-14 py-16"
     >
       <div className="text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-white">
           Questions I Can Help You Answer
         </h1>
-        <p className="max-w-3xl mx-auto text-lg text-gray-300 mb-12">
+        <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-300 mb-12">
           Feeling stuck or unsure of your next step? Whether it's personal
           growth, choosing the right career path, or starting your own business,
           I'm here to help you find clarity and direction.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 max-w-4xl mx-auto mb-12">
         {questions.map((question, index) => (
           <div
             key={index}
             className="flex items-start gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-sm"
           >
             <QuestionMarkCircledIcon className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-            <p className="text-gray-200">{question}</p>
+            <p className="text-gray-200 text-sm sm:text-base">{question}</p>
           </div>
         ))}
       </div>
@@ -55,9 +58,21 @@ const QuestionsAnswers = () => {
           understanding where you are, clarifying your goals, and mapping out
           the most efficient route to success.
         </p>
-        <button className="px-8 py-3 bg-secondary text-white rounded-full hover:bg-secondary/80 transition-colors">
-          Let's talk about how I can help you find your path
-        </button>
+        <div className="flex justify-center">
+          <HoverBorderGradient
+            containerClassName="rounded-xl"
+            as="button"
+            className="dark:bg-background bg-white text-black dark:text-white flex items-center"
+          >
+            <Link
+              href="/#contact"
+              className="text-center font-bold"
+              onClick={scrollToContact}
+            >
+              Let's talk about how I can help you find your path
+            </Link>
+          </HoverBorderGradient>
+        </div>
       </div>
     </motion.div>
   );

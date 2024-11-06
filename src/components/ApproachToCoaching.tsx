@@ -13,11 +13,13 @@ const ApproachToCoaching = () => {
       className="max-w-5xl mx-auto px-8 !mt-40"
     >
       <div className="text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-white">
           My Approach to Coaching
         </h1>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-          I don't give you the answers – I help you discover them. My coaching focuses on understanding where you are now and mapping out the most efficient way to get to your goals, whether personal or professional.
+        <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+          I don't give you the answers – I help you discover them. My coaching
+          focuses on understanding where you are now and mapping out the most
+          efficient way to get to your goals, whether personal or professional.
         </p>
       </div>
       <HoverEffect items={projects} />

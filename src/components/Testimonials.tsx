@@ -26,7 +26,7 @@ const Testimonials = () => {
       className=" px-4 py-16"
     >
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4">
           What My Clients Say
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto">

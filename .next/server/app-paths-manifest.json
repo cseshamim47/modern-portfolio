@@ -1,5 +1,4 @@
 {
-  "/icon/[[...__metadata_id__]]/route": "static/webpack/app/icon/[[...__metadata_id__]]/route.47afc07c635f2911.hot-update.js",
-  "/page": "app/page.js",
-  "/test/page": "app/test/page.js"
+  "/icon/[[...__metadata_id__]]/route": "app/icon/[[...__metadata_id__]]/route.js",
+  "/page": "app/page.js"
 }

@@ -19,7 +19,7 @@ const Services = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white animate-glow">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-white animate-glow">
           Coaching Services
         </h1>
       </motion.div>
@@ -29,7 +29,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="flex flex-col md:flex-row gap-8 justify-center items-center"
+        className="flex flex-col lg:flex-row gap-8 justify-center items-center mx-2"
       >
         <CardContainer className="inter-var">
           <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-blue-500/[0.1] bg-white dark:bg-background dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">

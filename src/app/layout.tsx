@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.className} dark `}>
+      <body className={`${spaceGrotesk.className} dark`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

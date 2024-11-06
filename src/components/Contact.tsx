@@ -40,10 +40,10 @@ const Contact = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        <h2 className="font-bold text-3xl md:text-4xl text-foreground text-center">
+        <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl text-foreground text-center">
           Let's Get in Touch
         </h2>
-        <p className="text-muted-foreground text-center max-w-2xl mx-auto mt-4 mb-8">
+        <p className="text-muted-foreground text-sm sm:text-base text-center max-w-2xl mx-auto mt-4 mb-8">
           Ready to take the next step? Whether you're seeking clarity,
           efficiency, or support, I'm here to help. Let's talk and find out how
           I can assist you in reaching your goals.
@@ -87,7 +87,7 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder="Tell me about your goals..."
-            className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border "
             required
           />
         </LabelInputContainer>
@@ -96,7 +96,7 @@ const Contact = () => {
           whileHover={{ scale: 1.005 }}
           whileTap={{ scale: 0.995 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="bg-primary relative group/btn w-full text-primary-foreground rounded-lg h-11 font-medium shadow-lg hover:opacity-90 transition-opacity"
+          className="bg-gradient-to-l from-indigo-500 to-purple-500 relative group/btn w-full text-primary-foreground rounded-lg h-11 font-medium shadow-lg hover:opacity-90 transition-opacity"
           type="submit"
         >
           Book a Free Discovery Session

@@ -4,33 +4,10 @@ import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 import { motion } from "framer-motion";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import Link from "next/link";
+import scrollToContact from "./Utility/ScrollToContact";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      const start = window.scrollY;
-      const end = contactSection.offsetTop;
-      const duration = 1000; // 1 second
-      const startTime = performance.now();
-
-      const easeInQuad = (t: number) => t * t;
-
-      const animate = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-
-        const easedProgress = easeInQuad(progress);
-        window.scrollTo(0, start + (end - start) * easedProgress);
-
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        }
-      };
-
-      requestAnimationFrame(animate);
-    }
-  };
+  
   return (
     <HeroHighlight className="w-[100vw]">
       <motion.div
@@ -69,7 +46,7 @@ const Hero = () => {
           delay: 0.5, // Delay until first motion.div appears
         }}
       >
-        <div className="flex flex-col items-center md:items-stretch gap-8 md:gap-0 md:flex-row md:justify-between md:space-x-6 w-full py-4 px-4 md:px-6 lg:px-20 max-w-7xl mx-auto">
+        <div className="flex flex-col text-center md:text-left items-center md:items-stretch gap-8 md:gap-0 md:flex-row md:justify-between md:space-x-6 w-full py-4 px-4 md:px-6 lg:px-20 max-w-7xl mx-auto">
           <div className=" space-y-6 hover:bg-background/40">
             <h2 className="text-center text-4xl font-bold">Personal</h2>
             <div className="text-xl space-y-2 font-medium">
