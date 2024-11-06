@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import Link from "next/link";
 import scrollToContact from "./Utility/ScrollToContact";
+import { FaCheck } from "react-icons/fa6";
 
 const Hero = () => {
-  
   return (
     <HeroHighlight className="w-[100vw]">
       <motion.div
@@ -51,31 +51,46 @@ const Hero = () => {
             <h2 className="text-center text-4xl font-bold">Personal</h2>
             <div className="text-xl space-y-2 font-medium">
               <div>
-                <h3>✔️ Self-Discovery & Growth 🧠</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Self-Discovery & Growth 🧠</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Explore your true potential and develop self-awareness.
                 </p>
               </div>
               <div>
-                <h3>✔️ Goal Setting & Motivation 🎯</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Goal Setting & Motivation 🎯</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Set and achieve meaningful personal goals.
                 </p>
               </div>
               <div>
-                <h3>✔️ Emotional Intelligence 💡</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Emotional Intelligence 💡</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Improve understanding and management of emotions.
                 </p>
               </div>
               <div>
-                <h3>✔️ Confidence Building 🚀</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Confidence Building 🚀</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Boost self-esteem and handle challenges with confidence.
                 </p>
               </div>
               <div>
-                <h3>✔️ Work-Life Balance ⚖️</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Work-Life Balance ⚖️</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Strategies to create a balanced and fulfilling lifestyle.
                 </p>
@@ -83,37 +98,52 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="w-[80vw] h-1 md:w-1 md:h-auto bg-border"></div>
+          <div className="w-[80vw] h-1 md:w-1 md:h-auto bg-green-200"></div>
 
           <div className="space-y-6 hover:bg-background/40">
             <h2 className="text-center text-4xl font-bold">Business</h2>
             <div className="text-xl space-y-2 font-medium">
               <div>
-                <h3>✔️ Productivity & Efficiency ⏳</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Productivity & Efficiency ⏳</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Optimize workflows and maximize time management.
                 </p>
               </div>
               <div>
-                <h3>✔️ Entrepreneurial Guidance 📈</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Entrepreneurial Guidance 📈</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Support for launching, scaling, or pivoting businesses.
                 </p>
               </div>
               <div>
-                <h3>✔️ Career Advancement 📋</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Career Advancement 📋</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Identify strengths and advance professionally.
                 </p>
               </div>
               <div>
-                <h3>✔️ Strategic Planning 📈</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Strategic Planning 📈</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Develop a clear roadmap to achieve your business goals.
                 </p>
               </div>
               <div>
-                <h3>✔️ Leadership Skill 🏆</h3>
+                <div className="flex gap-2 items-center justify-center md:justify-start">
+                  <FaCheck className="text-green-400 text-2xl" />
+                  <h3>Leadership Skill 🏆</h3>
+                </div>
                 <p className="text-base pl-8 font-normal">
                   Learn to lead, motivate, and inspire teams effectively.
                 </p>
