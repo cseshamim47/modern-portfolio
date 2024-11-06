@@ -24,7 +24,7 @@ const AboutMe = () => {
         </div>
         <div className="h-4 md:h-4"></div>
 
-        <div className="left-0 mx-5">
+        <div className="left-0 mx-5 overflow-hidden">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -157,13 +157,13 @@ const AboutMe = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl w-full md:block hidden"
+              className="relative aspect-square rounded-2xl shadow-2xl w-full md:block hidden overflow-hidden"
             >
               <Image
                 src="/jonas.jpeg"
                 alt="Jonas coaching"
                 fill
-                className="object-cover w-full"
+                className="object-cover w-full rounded-2xl"
                 style={{ objectPosition: "100% 20%" }}
                 priority
               />

@@ -6,8 +6,6 @@ import FloatingContact from "@/components/FloatingContact";
 
 const spaceGrotesk = Space_Grotesk({subsets: ["latin"]});
 
-
-
 export const metadata: Metadata = {
   title: "Oymor Coaching",
   description: "Best Coaching for your success",

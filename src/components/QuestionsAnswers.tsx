@@ -41,32 +41,10 @@ const QuestionsAnswers = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 max-w-4xl mx-auto mb-12">
         {questions.map((question, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ 
-              scale: 1.02,
-              backgroundColor: "rgb(134, 239, 172)", // green-300
-              color: "rgb(0, 0, 0)"
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 200, // Reduced stiffness for smoother motion
-              damping: 25, // Increased damping to reduce oscillation
-              duration: 0.3, // Added duration for color transition
-              backgroundColor: {
-                type: "tween",
-                duration: 0.2
-              },
-              color: {
-                type: "tween", 
-                duration: 0.2
-              }
-            }}
-            className="flex items-start gap-3 p-4 rounded-xl bg-secondary text-gray-200 cursor-pointer backdrop-blur-sm"
-          >
-            <QuestionMarkCircledIcon className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-            <p className="text-sm sm:text-base">{question}</p>
-          </motion.div>
+          <div key={index} className="flex items-start gap-3 p-4 rounded-xl bg-secondary text-gray-200 cursor-pointer hover:bg-green-300 backdrop-blur-sm hover:text-black group">
+            <QuestionMarkCircledIcon className="w-6 h-6 text-secondary flex-shrink-0 mt-1 text-white/80 group-hover:text-black" />
+            <p className="text-sm sm:text-base ">{question}</p>
+          </div>
         ))}
       </div>
 

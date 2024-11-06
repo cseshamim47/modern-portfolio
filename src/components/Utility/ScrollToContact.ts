@@ -2,7 +2,7 @@ const scrollToContact = () => {
   const contactSection = document.getElementById("contact");
   if (contactSection) {
     const start = window.scrollY;
-    const end = contactSection.offsetTop;
+    const end = contactSection.getBoundingClientRect().top + window.scrollY;
     const duration = 1000; // 1 second
     const startTime = performance.now();
 

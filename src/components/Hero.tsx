@@ -98,7 +98,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="w-[80vw] h-1 md:w-1 md:h-auto bg-green-200"></div>
+          <div className="w-[80vw] h-1 md:w-1 md:h-auto bg-white"></div>
 
           <div className="space-y-6 hover:bg-background/40">
             <h2 className="text-center text-4xl font-bold">Business</h2>

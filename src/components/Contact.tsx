@@ -5,6 +5,14 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { BackgroundBeams } from "./ui/background-beams";
+import { MdEmail } from "react-icons/md";
+import { FaPhoneSquareAlt } from "react-icons/fa";
+import Link from "next/link";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io5";
+import { AiFillTikTok } from "react-icons/ai";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,7 +42,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-4xl w-full mx-auto rounded-2xl p-8  absolute bottom-0 z-50"
+        className="max-w-4xl w-full mx-auto rounded-2xl p-8"
         id="contact"
       >
         <motion.div
@@ -110,18 +118,53 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="mt-12 text-center"
+          className="mt-12 "
         >
-          <p className="font-medium text-foreground">
+          <p className="font-medium text-foreground text-center mb-2">
             Alternative Contact Methods
           </p>
-          <p className="mt-2 text-muted-foreground">
-            Email: contact@example.com
-          </p>
-          <p className="text-muted-foreground">Phone: (555) 123-4567</p>
+          <div className="flex justify-center">
+            <div className="space-y-10">
+              <div className="space-y-2">
+                <Link
+                  href={`mailto:contact@example.com`}
+                  className="flex flex-row gap-2 items-center"
+                >
+                  <MdEmail className="text-green-300 text-xl" />
+                  <p className="text-muted-foreground">
+                    Email: contact@example.com
+                  </p>
+                </Link>
+                <Link
+                  href={`tel:123-4567`}
+                  className="flex flex-row gap-2 items-center"
+                >
+                  <FaPhoneSquareAlt className="text-green-300 text-xl" />
+                  <p className="text-muted-foreground">Phone: (555) 123-4567</p>
+                </Link>
+              </div>
+              <div className="flex gap-6 text-4xl justify-center items-center">
+                <Link href={`https://www.linkedin.com`}>
+                  <FaLinkedin className="hover:text-green-300"/>
+                </Link>
+                <Link href={`https://www.instagram.com/`}>
+                  <RiInstagramFill className="hover:text-green-300"/>
+                </Link>
+                <Link href={`https://www.youtube.com`}>
+                  <IoLogoYoutube className="hover:text-green-300"/>
+                </Link>
+                <Link href={`https://www.tiktok.com`}>
+                  <AiFillTikTok className="hover:text-green-300"/>
+                </Link>
+                <Link href={`https://www.facebook.com`}>
+                  <FaFacebookSquare className="hover:text-green-300"/>
+                </Link>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </motion.div>
-      <BackgroundBeams />
+      {/* <BackgroundBeams /> */}
     </div>
   );
 };
