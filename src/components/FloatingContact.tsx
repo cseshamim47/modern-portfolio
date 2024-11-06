@@ -16,7 +16,7 @@ const FloatingContact = () => {
     >
       <motion.button
         onClick={scrollToContact}
-        className="bg-primary text-primary-foreground p-3 md:p-4 rounded-full shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity"
+        className="bg-secondary text-primary-foreground p-3 md:p-4 rounded-full shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >

@@ -38,13 +38,14 @@ const AboutMe = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6 }}
-                className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl w-full md:hidden block"
+                className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl w-full md:hidden block mb-6"
               >
                 <Image
-                  src="/multi.jpg"
+                  src="/jonas.jpeg"
                   alt="Jonas coaching"
                   fill
                   className="object-cover w-full"
+                  style={{ objectPosition: "100% 20%" }}
                   priority
                 />
               </motion.div>
@@ -159,10 +160,11 @@ const AboutMe = () => {
               className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl w-full md:block hidden"
             >
               <Image
-                src="/multi.jpg"
+                src="/jonas.jpeg"
                 alt="Jonas coaching"
                 fill
                 className="object-cover w-full"
+                style={{ objectPosition: "100% 20%" }}
                 priority
               />
             </motion.div>
