@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import WhyChooseMe from "@/components/WhyChooseMe";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="space-y-20">
@@ -17,6 +18,7 @@ export default function Home() {
       <QuestionsAnswers />
       <Testimonials />
       <Contact />
+      <Footer />  
     </main>
   );
 }
